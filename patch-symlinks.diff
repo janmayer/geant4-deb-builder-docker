@@ -1,0 +1,32 @@
+@@ -127,8 +127,8 @@
+-if(UNIX AND NOT CMAKE_CONFIGURATION_TYPES)
+-  if(NOT EXISTS "${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/${GEANT4_SYSTEM}-${GEANT4_COMPILER}")
+-    file(MAKE_DIRECTORY "${CMAKE_LIBRARY_OUTPUT_DIRECTORY}")
+-    execute_process(COMMAND ${CMAKE_COMMAND} -E create_symlink . ${GEANT4_SYSTEM}-${GEANT4_COMPILER}
+-      WORKING_DIRECTORY "${CMAKE_LIBRARY_OUTPUT_DIRECTORY}"
+-      )
+-  endif()
+-endif()
++# if(UNIX AND NOT CMAKE_CONFIGURATION_TYPES)
++#   if(NOT EXISTS "${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/${GEANT4_SYSTEM}-${GEANT4_COMPILER}")
++#     file(MAKE_DIRECTORY "${CMAKE_LIBRARY_OUTPUT_DIRECTORY}")
++#     execute_process(COMMAND ${CMAKE_COMMAND} -E create_symlink . ${GEANT4_SYSTEM}-${GEANT4_COMPILER}
++#       WORKING_DIRECTORY "${CMAKE_LIBRARY_OUTPUT_DIRECTORY}"
++#       )
++#   endif()
++# endif()
+@@ -812,3 +812,3 @@
+-install(CODE "execute_process(COMMAND \${CMAKE_COMMAND} -E make_directory \"\$ENV{DESTDIR}${CMAKE_INSTALL_FULL_LIBDIR}/Geant4-${Geant4_VERSION}\")")
++# install(CODE "execute_process(COMMAND \${CMAKE_COMMAND} -E make_directory \"\$ENV{DESTDIR}${CMAKE_INSTALL_FULL_LIBDIR}/Geant4-${Geant4_VERSION}\")")
+
+-install(CODE "execute_process(COMMAND \${CMAKE_COMMAND} -E create_symlink .. ${GEANT4_SYSTEM}-${GEANT4_COMPILER} WORKING_DIRECTORY \"\$ENV{DESTDIR}${CMAKE_INSTALL_FULL_LIBDIR}/Geant4-${Geant4_VERSION}\")")
++# install(CODE "execute_process(COMMAND \${CMAKE_COMMAND} -E create_symlink .. ${GEANT4_SYSTEM}-${GEANT4_COMPILER} WORKING_DIRECTORY \"\$ENV{DESTDIR}${CMAKE_INSTALL_FULL_LIBDIR}/Geant4-${Geant4_VERSION}\")")
+@@ -809,4 +809,4 @@
+-if(UNIX)
+-  install(CODE "execute_process(COMMAND \${CMAKE_COMMAND} -E make_directory \"\$ENV{DESTDIR}${CMAKE_INSTALL_FULL_LIBDIR}/Geant4-${Geant4_VERSION}\")")
+-  install(CODE "execute_process(COMMAND \${CMAKE_COMMAND} -E create_symlink .. ${GEANT4_SYSTEM}-${GEANT4_COMPILER} WORKING_DIRECTORY \"\$ENV{DESTDIR}${CMAKE_INSTALL_FULL_LIBDIR}/Geant4-${Geant4_VERSION}\")")
+-endif()
++# if(UNIX)
++#   install(CODE "execute_process(COMMAND \${CMAKE_COMMAND} -E make_directory \"\$ENV{DESTDIR}${CMAKE_INSTALL_FULL_LIBDIR}/Geant4-${Geant4_VERSION}\")")
++#   install(CODE "execute_process(COMMAND \${CMAKE_COMMAND} -E create_symlink .. ${GEANT4_SYSTEM}-${GEANT4_COMPILER} WORKING_DIRECTORY \"\$ENV{DESTDIR}${CMAKE_INSTALL_FULL_LIBDIR}/Geant4-${Geant4_VERSION}\")")
++# endif()
